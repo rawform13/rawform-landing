@@ -150,11 +150,12 @@ p{
     transform: translateY(-6%) scale(1.02);
   }
 
-  .overlay{
-    align-items: flex-end;
-    justify-content: center;
-    padding: 0 14px 16px;
-  }
+.overlay{
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 14px 70px; /* antes 16px */
+}
+
 
   .card{
     width: min(560px, 92vw);
