@@ -146,10 +146,10 @@ p{
   .hero{ min-height: 100svh; }
 
   /* imagen a full impacto (usa tu movil.jpg automáticamente por <picture>) */
-  .hero__img{
+   .hero__img{
     object-fit: cover;
-    object-position: center 18%;
-    transform: scale(1.02);
+    object-position: center top;     /* pega el encuadre arriba */
+    transform: translateY(-6%) scale(1.02); /* sube + un pelín de punch */
   }
 
   /* overlay sin márgenes raros */
@@ -245,4 +245,5 @@ p{
       linear-gradient(to bottom, rgba(0,0,0,.05), rgba(0,0,0,.85));
   }
 }
+
 
