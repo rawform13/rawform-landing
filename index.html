@@ -1,41 +1,46 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>RAWFORM13</title>
-  <meta name="description" content="Estamos trabajando. Déjanos tu correo para avisarte cuando esté listo." />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
   <main class="page">
-    <section class="hero" aria-label="En construcción">
-      <img class="hero__img" src="./enconstruccion.jpg" alt="Sitio en construcción" />
-    </section>
+    <section class="hero">
 
-    <section class="signup" aria-label="Formulario de novedades">
-      <div class="card">
-        <h1>RAWFORM13</h1>
-<p>Something is taking shape. Be among the first to discover it.</p>
+      <picture>
+        <!-- Mobile -->
+        <source srcset="./movil.jpg" media="(max-width: 768px)">
 
+        <!-- Desktop -->
+        <img class="hero__img" src="./enconstruccion.jpg" alt="RAWFORM13" loading="eager">
+      </picture>
 
-        <form id="signupForm" class="form" method="POST" action="https://formspree.io/f/xnjbjbdy">
-          <label class="sr-only" for="email">Correo</label>
-          <input id="email" name="email" type="email" placeholder="Enter your email
-" required autocomplete="email" />
-          <button type="submit">Notify me</button>
-        </form>
+      <div class="overlay">
+        <div class="card">
+          <h1>RAWFORM13</h1>
+          <p>Something is taking shape. Be among the first to discover it.</p>
 
-        <p id="status" class="status" aria-live="polite"></p>
+          <form id="signupForm" class="form" method="POST" action="https://formspree.io/f/xnjbjbdy">
+            <input id="email" type="email" name="email" placeholder="Enter your email" required autocomplete="email">
+            <button type="submit">Notify me</button>
+          </form>
 
-        <small class="legal">
-          By submitting, you agree to receive launch updates. You may unsubscribe at any time.
-        </small>
+          <p id="status" class="status" aria-live="polite"></p>
+
+          <small class="legal">
+            By submitting, you agree to receive launch updates. You may unsubscribe at any time.
+          </small>
+        </div>
       </div>
+
     </section>
   </main>
 
-  <script src="script.js"></script>
+  <script src="./script.js"></script>
 </body>
 </html>
+
