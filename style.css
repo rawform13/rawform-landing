@@ -128,10 +128,10 @@ p{
 /* TEXTO LEGAL + STATUS (opcional pero recomendado) */
 .legal{
   display: block;
-  margin-top: 12px;
-  font-size: 0.8rem;
+  margin-top: 4px;   /* ⬅ antes estaba en 18px */
+  font-size: 0.72rem;
+  line-height: 1.25;
   color: rgba(255,255,255,.55);
-  line-height: 1.35;
 }
 
 .status{
@@ -142,24 +142,20 @@ p{
 /* ====== RAWFORM13 MOBILE: CINEMATIC MODE ====== */
 @media (max-width: 768px){
 
-  /* usa la altura real del móvil (Safari/Chrome) */
   .hero{ min-height: 100svh; }
 
-  /* imagen a full impacto (usa tu movil.jpg automáticamente por <picture>) */
-   .hero__img{
+  .hero__img{
     object-fit: cover;
-    object-position: center top;     /* pega el encuadre arriba */
-    transform: translateY(-6%) scale(1.02); /* sube + un pelín de punch */
+    object-position: center top;
+    transform: translateY(-6%) scale(1.02);
   }
 
-  /* overlay sin márgenes raros */
   .overlay{
     align-items: flex-end;
     justify-content: center;
     padding: 0 14px 16px;
   }
 
-  /* tarjeta compacta, premium, sin tapar el loading */
   .card{
     width: min(560px, 92vw);
     margin: 0;
@@ -175,7 +171,6 @@ p{
       0 0 0 1px rgba(255,255,255,.06) inset;
   }
 
-  /* tipografía más compacta */
   h1{
     font-size: 0.95rem;
     letter-spacing: 2px;
@@ -189,7 +184,6 @@ p{
     color: rgba(255,255,255,.78);
   }
 
-  /* formulario en una sola fila, pero bien */
   .form{
     display: grid;
     grid-template-columns: 1fr auto;
@@ -230,20 +224,22 @@ p{
     transform: translateY(1px);
   }
 
-  /* legal más pequeño para que no coma pantalla */
+  /* 🔥 Espacio corregido debajo del input */
+  .status{
+    margin-top: 4px;
+    min-height: 0;
+  }
+
   .legal{
-    margin-top: 10px;
+    margin-top: 6px;
     font-size: 0.72rem;
     line-height: 1.25;
     color: rgba(255,255,255,.55);
   }
 
-  /* oscurece un poco abajo para que el “LOADING” y la card respiren */
   .hero::after{
     background:
       radial-gradient(80% 60% at 50% 30%, rgba(0,0,0,.08), rgba(0,0,0,.55)),
       linear-gradient(to bottom, rgba(0,0,0,.05), rgba(0,0,0,.85));
   }
 }
-
-
